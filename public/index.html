@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesak World Loan & Savings App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-blue-600 text-white p-4 shadow-md">
+            <div class="container mx-auto flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Pesak World</h1>
+                <div class="space-x-4">
+                    <a href="#" class="hover:text-blue-200">Home</a>
+                    <a href="#loans" class="hover:text-blue-200">Loans</a>
+                    <a href="#savings" class="hover:text-blue-200">Savings</a>
+                    <a href="#" class="hover:text-blue-200">Account</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container mx-auto p-4">
+            <!-- Hero Section -->
+            <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-3xl font-bold text-blue-600 mb-4">Welcome to Pesak World</h2>
+                <p class="text-gray-700 mb-4">Your trusted partner for loans and savings solutions</p>
+                <div class="flex space-x-4">
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                        Apply for Loan
+                    </button>
+                    <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                        Start Saving
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loan Section -->
+            <section id="loans" class="bg-white rounded-lg shadow-md p-6 mb-8">
+                <h2 class="text-2xl font-bold text-blue-600 mb-4">Loan Services</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Loan Calculator</h3>
+                        <form id="loan-calculator" class="space-y-4">
+                            <div>
+                                <label for="loan-amount" class="block text-gray-700">Loan Amount</label>
+                                <input type="number" id="loan-amount" class="w-full p-2 border rounded">
+                            </div>
+                            <div>
+                                <label for="interest-rate" class="block text-gray-700">Interest Rate (%)</label>
+                                <input type="number" id="interest-rate" class="w-full p-2 border rounded">
+                            </div>
+                            <div>
+                                <label for="loan-term" class="block text-gray-700">Term (months)</label>
+                                <input type="number" id="loan-term" class="w-full p-2 border rounded">
+                            </div>
+                            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                                Calculate
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Loan Summary</h3>
+                        <div id="loan-results" class="bg-gray-100 p-4 rounded">
+                            <p class="text-gray-700">Enter loan details to see calculation</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Savings Section -->
+            <section id="savings" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold text-green-600 mb-4">Savings Goals</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Create Savings Goal</h3>
+                        <form id="savings-form" class="space-y-4">
+                            <div>
+                                <label for="goal-name" class="block text-gray-700">Goal Name</label>
+                                <input type="text" id="goal-name" class="w-full p-2 border rounded">
+                            </div>
+                            <div>
+                                <label for="target-amount" class="block text-gray-700">Target Amount</label>
+                                <input type="number" id="target-amount" class="w-full p-2 border rounded">
+                            </div>
+                            <div>
+                                <label for="target-date" class="block text-gray-700">Target Date</label>
+                                <input type="date" id="target-date" class="w-full p-2 border rounded">
+                            </div>
+                            <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition">
+                                Create Goal
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Your Goals</h3>
+                        <div id="savings-goals" class="space-y-4">
+                            <p class="text-gray-700">No savings goals yet</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white p-4 mt-8">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2023 Pesak World. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
